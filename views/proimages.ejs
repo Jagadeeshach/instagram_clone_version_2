@@ -1,0 +1,23 @@
+<% include ./partials/header.ejs %>
+<div class="posts w-full flex gap-1 py-2 flex-wrap bg-black">
+    <a href="/profile" class="text-white font-bold ml-2 mb-2"><i class="ri-arrow-left-s-line"></i> Back </a>
+        
+    <% user.posts.reverse().forEach(function(post){ %>
+      <a href="/proimages" class="post w-full h-full overflow-hidden mt-2 mb-2">
+        <div>
+            <h1 class="text-white font-bold pb-2 pl-2"><%= user.username %></h1>
+            
+            <img class="w-full h-full object-cover" src="/images/uploads/<%= post.picture %>" alt="gimg">
+            <div class="flex ml-2 mt-2">
+                <h4 class="text-white font-bold text-sm pr-2"><%= user.username %></h4>
+                <span class="text-white font-semibold text-sm"><%= post.caption %></span>
+            </div>
+            
+            
+
+        </div>
+        
+      </a>
+
+    <% }) %>
+  </div>

@@ -1,0 +1,67 @@
+<% include ./partials/header.ejs %>
+  <div class="w-full min-h-screen bg-zinc-900 px-4 py-5">
+    <div class="border-2 border-zinc-800 flex items-center justify-between px-2 py-1 rounded-md">
+        <i class="text-white ri-search-line"></i>
+        <input id="inputusername" class="ml-1 w-full bg-zinc-900 outline-none text-zinc-400" type="text" placeholder="Search Username">
+    </div>
+    <div class="users">
+
+    </div>
+    <div class="wjd flex gap flex-wrap pt-4 justify-center"> <!--Step 29: Users search in search bar, we are using axios-->
+        <% posts.reverse().forEach( function(elem){ %>
+
+                <div class="flex m-0.2">
+                    <img class="w-[122px] h-[122px] m-0.5  " src="/images/uploads/<%= elem.picture %>" alt="mimg">
+                </div>
+            
+
+        <% }) %>
+        
+    </div>
+
+  </div>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    //Step 30: Sending axios requests
+    const inp = document.querySelector("#inputusername")
+
+    let clutter = ""; //Step 34: printing required result in search div by adding the result inside 'clutter' variable.
+
+    inp.addEventListener("input", function(){
+        axios.get(`/username/${inp.value}`) //Whenever user types words it will be sending to backend for searching the matches
+        .then(function(newdat){ //Step 33: taking data from backend and printing the result 
+            clutter = "" //Step 34: printing required result in search div by adding the result inside 'clutter' variable.
+            newdat.data.forEach(function(elem){
+                clutter += `<a href="/profile" class="outline-none">
+                    <div class="text-white flex items-center gap-2 mt-5">
+                        <div class="image w-[11vw] h-[8vw]  rounded-full bg-sky-100 overflow-hidden">
+                            <img class="w-full h-full object-cover" src="/images/uploads/${elem.profileImage}" alt="iimg">
+                    
+                            </div>
+
+                
+                            
+                            <div class="text">
+                                <h3>${elem.username}</h3>
+                                <h4 class="text-xs opacity-30 leading-none">${elem.name}</h4>
+                                </div>
+                                </div>            
+                                </a>`
+                            })
+                            document.querySelector(".users").innerHTML = clutter; //Step 35: adding clutter variable inside user div
+                            document.querySelector(".wjd").innerHTML = "";
+
+                            
+                        })
+                    
+                    })
+
+                    
+
+
+  </script>
+
+  
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,42 @@
+.story::-webkit-scrollbar{
+  display: none;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+
+
+.error{
+  font-weight: 500;
+  color: red;
+  margin: 7px 0;
+  text-transform: capitalize;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.meta_tag{
+  font-family: 'Kanit', sans-serif;
+
+}
+
+.meta_headline{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.adregister{
+  background-position: center;
+  background-size: cover;
+  background-image: url('/images/instabg.png');
+}

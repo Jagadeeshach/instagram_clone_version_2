@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+}
+
+.container1{
+    padding-top: 1px;
+    height: 100%;
+    width: 100%;
+    background-color: #FFF;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.container1 nav{
+    position: relative;
+    height: 100%;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container1 nav label{
+    position: relative;
+    display: block;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+#create:checked ~ nav .create{
+    color: blue;
+}
+#live:checked ~ nav .live{
+    color: blue;
+}
+#expired:checked ~ nav .expired{
+    color: blue;
+}
+#leads:checked ~ nav .leads{
+    color: blue;
+}
+#help:checked ~ nav .help{
+    color: blue;
+}
+#budget:checked ~ nav .budget{
+    color: blue;
+}
+
+
+#settings:checked ~ nav .settings{
+    color: blue;
+}
+
+input[type='radio']{
+    display: none;
+}
+
+
+
+section{
+    padding-left: 20px;
+    filter: blur(0.3px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+section .content{
+    display: none;
+    margin-bottom: 20px;
+    
+}
+
+section .content .title{
+    font-size: 21px;
+    font-weight: 600;
+    margin: 10px 0 10px 0;
+}
+
+#create:checked ~ section .content-1{
+    display: block;
+    height: 100%;
+    width: 100%;
+   
+}
+
+#live:checked ~ section .content-2{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#expired:checked ~ section .content-3{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#leads:checked ~ section .content-4{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#budget:checked ~ section .content-5{
+    display: block;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#help:checked ~ section .content-6{
+    display: block;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#settings:checked ~ section .content-7{
+    display: block;
+    height: 100%;
+    width: 100%;
+    
+}
+
+

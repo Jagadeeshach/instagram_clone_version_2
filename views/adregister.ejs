@@ -1,0 +1,39 @@
+<% include ./partials/header.ejs %>
+<div class="adregister flex justify-center items-center min-h-screen">
+    <div class="pr-[150px] min-h-screen">
+        <div class="">
+            <img class="w-[120px] h-[60px] " src="./images/Meta-logo.png" alt="logo1">
+            <img class="w-[300px] h-[125px] pl-2" src="./images/logo.png" alt="logo2">
+        </div>
+        <div class=" pt-[50px]">
+            <h1 class="meta_headline font-bold text-5xl">INSTAGRAM ADS MANAGER</h1>
+            <h2 class="meta_tag font-semibold text-2xl text-white" >Grow Your Business With Meta Platforms</h2>
+        </div>
+    </div>
+
+    <form class="flex flex-col w-[380px]  rounded-md bg-white justify-center" action="/adregister" method="post" >
+        <h2 class="font-semibold text-2xl p-3" >Create Your Ad Account</h2>
+
+        <input class="p-2 m-0.5 rounded-full border border-2 border-zinc-300" type="text" placeholder="Enter Your Username" name ="username">
+        <input class="p-2 m-0.5 rounded-full border border-2 border-zinc-300" type="text" name ="fullname" placeholder="Enter Your Full Name">
+        <input class="p-2 m-0.5 rounded-full border border-2 border-zinc-300" type="email" name ="email" placeholder="Enter Your Email">
+        <input class="p-2 m-0.5 rounded-full border border-2 border-zinc-300" type="password" name ="password" placeholder="Enter Your Password">
+        <input class="p-2 m-0.5 rounded-full border border-2 border-zinc-300" type="number" name ="phone" placeholder="Enter Your Contact Number">
+        <input class="p-2 m-0.5 rounded-full border border-2 border-zinc-300" type="text" name ="businessname" placeholder="Enter Your Business Name">
+        <input class="p-2 m-0.5 rounded-full border border-2 border-zinc-300" type="text" name ="office_location" placeholder="Enter Your Office Location">
+        <input class="p-2 m-0.5 rounded-full border border-2 border-zinc-300" type="text" name ="office_address" placeholder="Enter Your Office Address">
+        <input class="p-2 m-0.5 rounded-full border border-2 border-zinc-300" type="text" name ="businesscategory" placeholder="Enter Your Business Category">
+        <input class="p-1.5 m-1 rounded-full border border-2 border-zinc-300" type="number" name ="number_of_employees" placeholder="Enter The Number Of Employees">
+        <input class="p-3 m-1 rounded-full bg-pink-400 font-bold text-white" type="submit" value="Create Account">
+        <div class="pl-5 pt-2 pb-2">
+            <span class="font-bold">Already have an account ? <a href="/adlogin" class="text-blue-500">Log In</a></span>
+
+        </div>
+        
+        
+    </form>
+
+</div>
+
+
+
